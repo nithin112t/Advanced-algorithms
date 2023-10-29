@@ -1,0 +1,25 @@
+#include<iostream>
+#include<array>
+using namespace std;
+
+int main(){
+	int no_of_elements;
+	int arrayelements[110];
+	int target;
+	cout<<"Enter size of array";
+	cin>>no_of_elements;
+	cout<<"Enter the elements in array";
+	for(int i=0;i<no_of_elements;i++){
+		cin>>arrayelements[i];
+	}
+	cout<<"Enter the target number";
+	cin>>target;
+	for (int j=0;j<(no_of_elements-1);j++){
+		for (int k=(j+1);k<no_of_elements;k++){
+			if((arrayelements[j]+arrayelements[k])==target){
+				cout<<j;
+				cout<<k;
+			}
+		}
+	}
+}
